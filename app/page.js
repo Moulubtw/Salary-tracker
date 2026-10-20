@@ -1,12 +1,7 @@
-import Dashboard from "@/components/Dashboard";
+import LandingPage from "@/components/LandingPage";
 import { getCurrentUser } from "@/lib/auth";
-import { redirect } from "next/navigation";
 
 export default async function HomePage() {
   const user = await getCurrentUser();
-  if (!user) {
-    redirect("/login");
-  }
-
-  return <Dashboard user={user} />;
+  return <LandingPage signedIn={Boolean(user)} />;
 }

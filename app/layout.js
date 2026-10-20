@@ -2,7 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "Касса — трекер доходов и расходов",
-  description: "Личный трекер финансов с регистрацией и облачным хранением",
+  description:
+    "Лендинг и личный трекер финансов: регистрация, графики и облачное хранение в Neon",
 };
 
 export default function RootLayout({ children }) {

@@ -26,7 +26,7 @@ export default function LoginPage() {
         setError(data.error || "Не удалось войти");
         return;
       }
-      router.replace("/");
+      router.replace("/app");
       router.refresh();
     } catch {
       setError("Сеть недоступна. Попробуйте ещё раз.");
@@ -38,12 +38,12 @@ export default function LoginPage() {
   return (
     <main className="auth-page">
       <div className="auth-card">
-        <div className="auth-brand">
+        <Link href="/" className="auth-brand" style={{ textDecoration: "none" }}>
           <span className="brand-mark" aria-hidden="true" />
           <span className="brand-name" style={{ color: "var(--ink)" }}>
             касса
           </span>
-        </div>
+        </Link>
         <p className="eyebrow">Вход</p>
         <h1>С возвращением</h1>
         <form className="auth-form" onSubmit={handleSubmit}>
